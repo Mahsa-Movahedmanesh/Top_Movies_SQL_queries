@@ -1,0 +1,44 @@
+/* Create table about the people and what they do here */
+CREATE TABLE famous_people(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT);
+
+CREATE TABLE things (id INTEGER PRIMARY KEY AUTOINCREMENT, person_id INTEGER, name TEXT);
+
+INSERT INTO famous_people(name) VALUES ("Isaac Newton");
+INSERT INTO famous_people(name) VALUES ("Jesus Christ");
+INSERT INTO famous_people(name) VALUES ("Muhammad");
+INSERT INTO famous_people(name) VALUES ("Confucius");
+INSERT INTO famous_people(name) VALUES ("Buddha");
+INSERT INTO famous_people(name) VALUES ("Albert Einstein");
+INSERT INTO famous_people(name) VALUES ("Galileo Galilei");
+INSERT INTO famous_people(name) VALUES ("Aristotle");
+INSERT INTO famous_people(name) VALUES ("Moses ");
+INSERT INTO famous_people(name) VALUES ("Charles Darwin");
+INSERT INTO famous_people(name) VALUES ("Augustus Caesar");
+INSERT INTO famous_people(name) VALUES ("Constantine the Great");
+INSERT INTO famous_people(name) VALUES ("James Clerk Maxwell");
+INSERT INTO famous_people(name) VALUES ("Martin Luther");
+INSERT INTO famous_people(name) VALUES ("George Washington");
+INSERT INTO famous_people(name) VALUES ("Adam Smith");
+
+INSERT INTO things (person_id, name) VALUES(1,"Gravity");
+INSERT INTO things (person_id, name) VALUES(2,"Christianity");
+
+INSERT INTO things (person_id, name) VALUES(3,"Islam");
+INSERT INTO things (person_id, name) VALUES(4," Chinese philosophy");
+INSERT INTO things (person_id, name) VALUES(5,"Buddhism");
+INSERT INTO things (person_id, name) VALUES(6," Theory of Relativity");
+INSERT INTO things (person_id, name) VALUES(7,"The heliocentric view of the universe");
+INSERT INTO things (person_id, name) VALUES(8,"Greek philosophy");
+INSERT INTO things (person_id, name) VALUES(9,"Jewish");
+INSERT INTO things (person_id, name) VALUES(10,"theory of evolution");
+INSERT INTO things (person_id, name) VALUES(11,"Emperor of Rome");
+INSERT INTO things (person_id, name) VALUES(12,"Roman Emperor ");
+INSERT INTO things (person_id, name) VALUES(13,"electromagnetism");
+INSERT INTO things (person_id, name) VALUES(14,"Protestant Reformation");
+INSERT INTO things (person_id, name) VALUES(15,"Emperor of Rome");
+INSERT INTO things (person_id, name) VALUES(16,"classical economics");
+
+
+SELECT famous_people.name, things.name FROM famous_people JOIN things ON famous_people.id=things.person_id;
+
+ 
