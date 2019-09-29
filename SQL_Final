@@ -1,15 +1,27 @@
-CREATE TABLE health (id INTEGER PRIMARY KEY AUTOINCREMENT,day TEXT, date TEXT, activity TEXT, durtaion_in_min NUMERIC);
 
-INSERT INTO health (day , date, activity , durtaion_in_min) VALUES ("Wednesday", "09/24/2019","jugging" ,67);
-INSERT INTO health (day , date, activity , durtaion_in_min) VALUES ("Tuesday", "09/24/2019","Walking" ,120);
-INSERT INTO health (day , date, activity , durtaion_in_min) VALUES ("Thursday", "09/25/2019","jugging" ,36);
+
+CREATE TABLE health (id INTEGER PRIMARY KEY AUTOINCREMENT,day TEXT, date TEXT, activity TEXT, duration_in_min NUMERIC);
+
+INSERT INTO health (day , date, activity , duration_in_min) VALUES ("Wednesday", "09/24/2019","Jugging" ,67);
+INSERT INTO health (day , date, activity , duration_in_min) VALUES ("Tuesday", "09/24/2019","Walking" ,120);
+INSERT INTO health (day , date, activity , duration_in_min) VALUES ("Thursday", "09/25/2019","Jugging" ,36);
+INSERT INTO health (day , date, activity , duration_in_min) VALUES ("Friday", "09/26/2019","Jugging" ,50);
+INSERT INTO health (day , date, activity , duration_in_min) VALUES ("Saturday", "09/27/2019","Walking" ,12);
+INSERT INTO health (day , date, activity , duration_in_min) VALUES ("Sunday", "09/28/2019","Walking" ,26);
+INSERT INTO health (day , date, activity , duration_in_min) VALUES ("Monday", "09/29/2019","Walking" ,7);
+INSERT INTO health (day , date, activity , duration_in_min) VALUES ("Tuesday", "09/24/2019","Jugging" ,20);
+INSERT INTO health (day , date, activity , duration_in_min) VALUES ("Thursday", "09/25/2019","Walking" ,56);
 
 SELECT * FROM health;
 
 UPDATE health SET date ="09/23/2019" WHERE day ="Tuesday";
-
+UPDATE health SET duration_in_min = 18 WHERE id=6;
 SELECT * FROM health;
 
-DELETE FROM health WHERE day = "Tuesday";
-
+DELETE FROM health WHERE id = 2;
+DELETE FROM health WHERE id=8;
 SELECT * FROM health;
+
+ALTER TABLE health ADD cal NUMERIC;
+SELECT * FROM health;
+
