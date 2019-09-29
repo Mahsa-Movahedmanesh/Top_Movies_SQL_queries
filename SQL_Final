@@ -1,0 +1,15 @@
+CREATE TABLE health (id INTEGER PRIMARY KEY AUTOINCREMENT,day TEXT, date TEXT, activity TEXT, durtaion_in_min NUMERIC);
+
+INSERT INTO health (day , date, activity , durtaion_in_min) VALUES ("Wednesday", "09/24/2019","jugging" ,67);
+INSERT INTO health (day , date, activity , durtaion_in_min) VALUES ("Tuesday", "09/24/2019","Walking" ,120);
+INSERT INTO health (day , date, activity , durtaion_in_min) VALUES ("Thursday", "09/25/2019","jugging" ,36);
+
+SELECT * FROM health;
+
+UPDATE health SET date ="09/23/2019" WHERE day ="Tuesday";
+
+SELECT * FROM health;
+
+DELETE FROM health WHERE day = "Tuesday";
+
+SELECT * FROM health;
